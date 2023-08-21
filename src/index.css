@@ -1,18 +1,27 @@
-@import url('https://fonts.cdnfonts.com/css/shoese-flower');
-@import url('https://fonts.cdnfonts.com/css/funky-retrovy');
+@import url('https://fonts.cdnfonts.com/css/tt-wellingtons-trl');
+@import url('https://fonts.cdnfonts.com/css/aliment-personal-use');
 
 body {
     background-color: #ffffff;
+    color: #47484a;
+}
+
+a {
+    color: inherit;
 }
 
 #main-section {
     display: grid;
     grid-template-areas: 'nav nav nav nav'
-        's1 s1 s1 s1';
-    grid-template-rows: 50px 100vh;
+        's1 s1 s1 s1'
+        's2 s2 s2 s2';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 70vh auto;
     gap: 1rem;
     padding: 10px;
 }
+
+/*Navigation Bar */
 
 #navbar {
     background-color: transparent;
@@ -23,12 +32,28 @@ body {
     background-color: transparent !important;
 }
 
-.nav-link {
-    margin: 0px 30px;
+.navbar-brand {
+    font-family: 'Aliment PERSONAL USE', sans-serif;
+    color: #47484a;
+    font-size: 1.1rem;
 }
 
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.icons {
+    padding: 10px;
+}
+
+#subscribe {
+    text-align: center;
+    font-family: 'TT Wellingtons Trl', sans-serif;
+}
+
+/*Section 1*/
 #section-1 {
-    background-color: #f5f7f9;
+    background-color: #ffffff;
     grid-area: s1;
     border-radius: 20px;
 }
@@ -36,70 +61,116 @@ body {
 #s1-container {
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: 100%;
     color: #424242;
 
-    #title-div {
-        padding: 40px;
-    }
-
-    #chip-content {
-        color: #ffffff;
-        background-color: #5f5f61;
-    }
-
-    #title {
-        font-size: 8vh;
+    #paragraph {
+        padding: 10px;
+        font-size: 1.9vh;
         text-align: center;
         line-height: 1.5;
-    }
-
-    #paragraph {
-                font-size: 2.8vh;
-                    text-align: center;
-                    line-height: 1.5;
-    }
-
-    #buttons,
-    #chip {
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    #btn1 {
-        background-color: #424242;
-        color: #ffffff;
-    }
-
-    #btn1,
-    #btn2 {
-        margin: 7px;
-        border-radius: 20px;
-
+        color: #a7a8a9;
+        font-family: 'TT Wellingtons Trl', sans-serif;
     }
 }
+
+
+/*Section 2*/
+#section-2 {
+    background-color: transparent;
+    grid-area: s2;
+}
+
+
+#s2-container {
+    display: grid;
+    grid-template-areas: 'box1 box1 box2 box2';
+    gap: 0.7rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30rem;
+}
+
+#image-box1 {
+    background-image: url('https://images.unsplash.com/photo-1633803398339-974b02665a73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80');
+    background-position: center;
+    background-size: cover;
+    grid-area: box1;
+}
+
+#image-box2 {
+    background-image: url('https://images.unsplash.com/photo-1635253507313-8460c6a334f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1727&q=80');
+    background-position: center;
+    background-size: cover;
+    grid-area: box2;
+}
+
 
 /* Target small devices like phones */
 @media (max-width: 767px) {
     #main-section {
         display: grid;
         grid-template-areas: 'nav nav nav nav'
-            's1 s1 s1 s1';
-        grid-template-rows: 50px 100vh;
+            's1 s1 s1 s1'
+            's2 s2 s2 s2';
+        grid-template-rows: auto 75vh auto;
         gap: 1rem;
     }
+
+    #s2-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            'box1 box1 box2 box2';
+
+    }
+
+    #title {
+        font-family: 'TT Wellingtons Trl', sans-serif;
+        font-weight: 300;
+        font-size: 5vh;
+        text-align: center;
+        line-height: 1.5;
+    }
 }
+
+
 
 /* Target medium devices like tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
     #main-section {
         display: grid;
         grid-template-areas: 'nav nav nav nav'
-            's1 s1 s1 s1';
-        grid-template-rows: 50px 100vh;
+            's1 s1 s1 s1'
+            's2 s2 s2 s2';
+        grid-template-rows: auto 75vh auto;
         gap: 1rem;
+    }
+
+    #s2-container {
+        display: grid;
+        grid-template-areas:
+            'box1 box1 box2 box2';
+        height: auto;
+        grid-template-rows: 30rem;
+    }
+
+    #title {
+        font-family: 'TT Wellingtons Trl', sans-serif;
+        font-size: 5.7vh;
+        text-align: center;
+        line-height: 1.5;
+        font-weight: 300;
+        color: #47484a;
+    }
+}
+
+@media (min-width: 1024px) {
+    #title {
+        font-family: 'TT Wellingtons Trl', sans-serif;
+        font-size: 7.5vh;
+        text-align: center;
+        line-height: 1.5;
+        font-weight: 300;
+        color: #47484a;
     }
 }
