@@ -127,10 +127,17 @@ a {
     #title {
         font-family: 'TT Wellingtons Trl', sans-serif;
         font-weight: 300;
-        font-size: 5vh;
+        font-size: 2.3rem;
         text-align: center;
         line-height: 1.5;
     }
+
+    #s1-container {
+    #paragraph {
+            font-size: .7rem;
+        }
+    }
+
 }
 
 
@@ -156,12 +163,19 @@ a {
 
     #title {
         font-family: 'TT Wellingtons Trl', sans-serif;
-        font-size: 5.7vh;
+        font-size: 2.5rem;
         text-align: center;
         line-height: 1.5;
         font-weight: 300;
         color: #47484a;
     }
+
+
+        #s1-container {
+            #paragraph {
+                font-size: .8rem;
+            }
+        }
 }
 
 @media (min-width: 1024px) {
